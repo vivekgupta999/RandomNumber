@@ -4,7 +4,7 @@ import SwiftUI
 public struct RandomNumber: View {
     
     @ObservedObject var random = RandomNumberVM()
-    @Binding var randomNumber : Int
+    @Binding public var randomNumber : Int
     
     public var body: some View {
         VStack{
