@@ -13,7 +13,7 @@ public class RandomNumberVM : ObservableObject {
     @Published public var number: Int = Int()
     @Published public var randomNumber: Int = Int()
     
-    func generateRandomNumber(){
+    public func generateRandomNumber(){
         randomNumber =  Int.random(in: number..<number+1000)
     }
 }
