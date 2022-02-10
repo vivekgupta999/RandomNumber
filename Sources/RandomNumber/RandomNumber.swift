@@ -2,10 +2,9 @@ import SwiftUI
  
 @available(iOS 15.0, macOS 12.0, *)
 public struct RandomNumber: View {
-    @Binding var random : RandomNumberVM
-    
-    public init(random: Binding<RandomNumberVM>){
-        self._random = random
+    @ObservedObject var random = RandomNumberVM()
+    public init(random: RandomNumberVM){
+        self.random = random
     }
     
     public var body: some View {
