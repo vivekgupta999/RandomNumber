@@ -10,8 +10,8 @@ import Foundation
 @available(iOS 15.0, macOS 12.0, *)
 public class RandomNumberVM : ObservableObject {
 
-    @Published var number: Int = Int()
-    @Published var randomNumber: Int = Int()
+    @Published public var number: Int = Int()
+    @Published public var randomNumber: Int = Int()
     
     func generateRandomNumber(){
         randomNumber =  Int.random(in: number..<number+1000)
