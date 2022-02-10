@@ -8,7 +8,7 @@
 import Foundation
 
 @available(iOS 15.0, macOS 12.0, *)
-public class RandomVM : ObservableObject {
+public class RandomNumberVM : ObservableObject {
 
     @Published var number: Int = Int()
     @Published var randomNumber: Int = Int()
