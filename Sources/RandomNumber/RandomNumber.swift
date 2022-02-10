@@ -2,10 +2,9 @@ import SwiftUI
  
 @available(iOS 15.0, macOS 12.0, *)
 public struct RandomNumber: View {
+    
     @ObservedObject var random = RandomNumberVM()
-    public init(random: RandomNumberVM){
-        self.random = random
-    }
+    @Binding var randomNumber : Int
     
     public var body: some View {
         VStack{
@@ -14,7 +13,7 @@ public struct RandomNumber: View {
                 .textFieldStyle(.roundedBorder)
 
             Button {
-                random.generateRandomNumber()
+                randomNumber = random.generateRandomNumber()
             } label: {
                 Text("Send")
                     .padding(10)

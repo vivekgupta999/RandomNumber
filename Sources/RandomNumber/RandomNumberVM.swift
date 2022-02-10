@@ -11,9 +11,9 @@ import Foundation
 public class RandomNumberVM : ObservableObject {
 
     @Published public var number: Int = Int()
-    @Published public var randomNumber: Int = Int()
+//    @Published public var randomNumber: Int = Int()
     
-    public func generateRandomNumber(){
-        randomNumber =  Int.random(in: number..<number+1000)
+    public func generateRandomNumber()->Int{
+        return Int.random(in: number..<number+1000)
     }
 }
